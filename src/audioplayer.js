@@ -12,7 +12,7 @@
         const playlist = player.querySelector('[data-audioplayer-playlist]');
         // Elements where the current Track Infos are renderd in
         const currentTrackImage = player.querySelector('[data-audioplayer-current="cover"]');
-        const currentTrackTitle = player.querySelector('[data-audioplayer-current="track"]');
+        const currentTrackTitle = player.querySelector('[data-audioplayer-current="title"]');
         const currentArtistTitle = player.querySelector('[data-audioplayer-current="artist"]');
         // Controls
         const playPauseButton = controls.querySelector('[data-audioplayer-control="play-pause"]');

@@ -36,18 +36,18 @@ the following `data-audioplayer-control` attributes are available:
 
 use data-audioplayer-current-{name} to dynamically show informations about the currently playing track.
 the following values are available:
-- `data-audioplayer-current-artist`
-- `data-audioplayer-current-track`
-- `data-audioplayer-current-image`
+- `data-audioplayer-current="title"`
+- `data-audioplayer-current="title"`
+- `data-audioplayer-current="cover"`
 
 ### creating the playlist
 
 playlist have to wrapped inside a `data-audioplayer-playlist` element.
 
 each track should be wrapped inside an element that has `data-audioplayer-track` and the `data-audioplayer-track-url="my/path/to/the/track.mp3"`. inside this element you can use the following data attributes to signify infiormtaions for the audioplayer:
-- `data-audioplayer-track-title`
-- `data-audioplayer-track-artist`
-- `data-audioplayer-track-cover` (use on `img` elements)
+- `data-audioplayer-track="title"`
+- `data-audioplayer-track="artist"`
+- `data-audioplayer-track="cover"` (use on `img` elements)
 
 ## Example Code
  
