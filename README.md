@@ -55,14 +55,14 @@ each track should be wrapped inside an element that has `data-audioplayer-track`
     <!-- Initialize the audioplayer -->
     <section data-audioplayer>
         <div>
-            <p data-audioplayer-current-track>
+            <p data-audioplayer-current="title">
                 <!-- Track will be inserted here via JS, default: first in list -->
             </p>
-            <p data-audioplayer-current-artist>
+            <p data-audioplayer-current="artist">
                 <!-- Artist will be inserted here via JS, default: first in list -->
             </p>
             <figure>
-                <img data-audioplayer-current-image>
+                <img data-audioplayer-current="cover">
             </figure>
         </div>
         <!-- Controls Wrapper -->
