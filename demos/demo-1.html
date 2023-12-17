@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audioplayer Demo 1</title>
+</head>
+<body>
+    <section data-audioplayer>
+        <section>
+            <p data-audioplayer-current="track"></p>
+            <p data-audioplayer-current="artist"></p>
+            <img data-audioplayer-current="cover">
+        </section>
+        <div data-audioplayer-controls>
+            <button data-audioplayer-control="play-pause">Play</button>
+        </div>
+        <div data-audioplayer-playlist>
+            <div data-audioplayer-track data-audioplayer-track-url="file:///Users/lucamack/Desktop/projects/_public/audioplayer.js/gestern.mp3">
+                <p data-audioplayer-track="title">Track Name</p>
+                <p data-audioplayer-track="artist">Artist Name</p>
+                <img data-audioplayer-track="cover" src="https://placehold.co/600">
+            </div>
+        </div>
+    </section>
+    <script src="../src/audioplayer.js"></script>
+</body>
+</html>
