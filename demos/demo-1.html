@@ -1,29 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Audioplayer Demo 1</title>
 </head>
+
 <body>
     <section data-audioplayer>
-        <section>
-            <p data-audioplayer-current="track"></p>
-            <p data-audioplayer-current="artist"></p>
-            <img data-audioplayer-current="cover">
-        </section>
-        <div data-audioplayer-controls>
-            <button data-audioplayer-control="play-pause">Play</button>
+        <div>
+            <section>
+                <p data-audioplayer-current="track"></p>
+                <p data-audioplayer-current="artist"></p>
+                <img data-audioplayer-current="cover">
+            </section>
+            <div data-audioplayer-controls>
+                <div>
+                    <input type="range" data-audioplayer-control="progress-bar">
+                </div>
+                <div>
+                    <button data-audioplayer-control="prev">Prev</button>
+                    <button data-audioplayer-control="play-pause">Play</button>
+                    <button data-audioplayer-control="next">Next</button>
+                </div>
+                <div>
+                    <input type="range" data-audioplayer-control="volume">
+                </div>
+            </div>
         </div>
         <div data-audioplayer-playlist>
-            <div data-audioplayer-track data-audioplayer-track-url="file:///Users/lucamack/Desktop/projects/_public/audioplayer.js/gestern.mp3">
-                <p data-audioplayer-track="title">Track Name</p>
-                <p data-audioplayer-track="artist">Artist Name</p>
+            <button data-audioplayer-track data-audioplayer-track-url="../dist/song-1.mp3">
+                <p data-audioplayer-track="title">Track Name 1</p>
+                <p data-audioplayer-track="artist">Artist Name 1</p>
                 <img data-audioplayer-track="cover" src="https://placehold.co/600">
-            </div>
+            </button>
+            <button data-audioplayer-track data-audioplayer-track-url="../dist/song-2.mp3">
+                <p data-audioplayer-track="title">Track Name 2</p>
+                <p data-audioplayer-track="artist">Artist Name 2</p>
+                <img data-audioplayer-track="cover" src="https://placehold.co/500">
+            </button>
+            <button data-audioplayer-track data-audioplayer-track-url="../dist/song-3.mp3">
+                <p data-audioplayer-track="title">Track Name 3</p>
+                <p data-audioplayer-track="artist">Artist Name 3</p>
+                <img data-audioplayer-track="cover" src="https://placehold.co/400">
+            </button>
         </div>
     </section>
     <script src="../src/audioplayer.js"></script>
 </body>
+
 </html>

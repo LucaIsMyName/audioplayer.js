@@ -8,15 +8,15 @@ there can be as many audioplayer on a single html page as you like, they all wil
 
 all common web-audio formats are supported: `.mp3`, `.wav`, `.webm`
 
-## creating an audioplayer
+## creating an `audioplayer`
 
 to signify that an audioplayer is used you have to create a container/element with the `data-audioplayer` attribute, all other elements of the player must be inside this element.
 
 `audioplayer.js` consists of three main parts: `controls`, `playlist` and `currently-playing`
 
-`controls`: hosts all controls element like, play, pause, mute inside. Have to be wrapped inside `data-audioplayer-controls` attribute.
-`playlist`: hosts all information about each track like: Name, Artist or Cover Image. Have to wrapped inside `data-audioplayer-playlist` attribute
-`currently-playing`: a set of data-attributes that dynamically render informations about the currently playing track. They only have to be wrapped inside `data-audioplayer` and can be playced anywhere inside.
+- `controls`: hosts all controls element like, play, pause, mute inside. Have to be wrapped inside `data-audioplayer-controls` attribute.
+- `playlist`: hosts all information about each track like: Name, Artist or Cover Image. Have to wrapped inside `data-audioplayer-playlist` attribute
+- `currently-playing`: a set of data-attributes that dynamically render informations about the currently playing track. They only have to be wrapped inside `data-audioplayer` and can be playced anywhere inside.
 
 ### controls
 
@@ -67,27 +67,34 @@ each track should be wrapped inside an element that has `data-audioplayer-track`
         </div>
         <!-- Controls Wrapper -->
         <div data-audioplayer-controls>
+            <input type="range" data-audioplayer-control="progress-bar">
             <div>
                 <button data-audioplayer-control="prev">Prev</button>
                 <button data-audioplayer-control="play-pause">Play/Pause</button>
                 <button data-audioplayer-control="next">Next</button>
-                <button data-audioplayer-control="mute-unmute">Mute/Unmute</button>
             </div>
             <div>
-                <input type="range" data-audioplayer-control="volume">
-                <input type="range" data-audioplayer-control="progress-bar">
+                <button data-audioplayer-control="repeat-track">Repeat Track</button>
+                <button data-audioplayer-control="mute-unmute">Mute/Unmute</button>
+                <button data-audioplayer-control="repeat-playlist">Repeat Playlist</button>
             </div>
+            <input type="range" data-audioplayer-control="volume">
         </div>
         <section data-audioplayer-playlist>
-            <button data-audioplayer-track data-audioplayer-track-url="track-1.mp3">
-                <p data-audioplayer-track-title>Track 1</p>
-                <p data-audioplayer-track-artist>Artist Name</p>
-                <img src="https://placehold.co/600" data-audioplayer-track-cover>
+            <button data-audioplayer-track data-audioplayer-track-url="song-1.mp3">
+                <p data-audioplayer-track="title">Track 1</p>
+                <p data-audioplayer-track="artist">Artist Name 1</p>
+                <img src="https://placehold.co/600" data-audioplayer-track="cover">
             </button>
-            <button data-audioplayer-track data-audioplayer-track-url="track-2.mp3">
-                <p data-audioplayer-track-title>Track 2</p>
-                <p data-audioplayer-track-artist>Artist Name</p>
-                <img src="https://placehold.co/400" data-audioplayer-track-cover>
+            <button data-audioplayer-track data-audioplayer-track-url="song-2.mp3">
+                <p data-audioplayer-track="title">Track 2</p>
+                <p data-audioplayer-track="artist">Artist Name 2</p>
+                <img src="https://placehold.co/400" data-audioplayer-track="cover">
+            </button>
+             <button data-audioplayer-track data-audioplayer-track-url="song-3.mp3">
+                <p data-audioplayer-track="title">Track 3</p>
+                <p data-audioplayer-track="artist">Artist Name 3</p>
+                <img src="https://placehold.co/500" data-audioplayer-track="cover">
             </button>
         </section>
     </section>
